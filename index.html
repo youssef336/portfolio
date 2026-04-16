@@ -1,254 +1,470 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Youssef — Kotlin App Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header class="site-header">
-    <div class="container">
-      <h1>Youssef — Flutter Apps</h1>
-      <p class="tagline">software developer • Flutter devoloper and Beginner in Kotlin • APK downloads</p>
-      <nav class="nav">
-        <a href="#apps">Apps</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="github-repo" content="youssef336/portfolio" />
+    <meta name="github-branch" content="main" />
+    <meta name="github-apk-path" content="apks" />
+    <title>Youssef — Kotlin App Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-bar">
+        <a class="brand" href="#top" aria-label="Go to top">
+          <span class="brand-mark">YB</span>
+          <span class="brand-copy">
+            <strong>Youssef Belal</strong>
+            <small>Flutter and Kotlin developer</small>
+          </span>
+        </a>
 
-  <main class="container">
-    <section id="apps">
-      <h2>My apps</h2>
-      <p>Download and try my Android apps. You might need to enable “Install from unknown sources” on your device.</p>
-
-      <div class="grid">
-        <!-- App card 1 -->
-      <article class="card">
-  <img src="images/fruits_hub-icon.png" alt="Fruits Hub App Icon" class="card-img" />
-  <div class="card-body">
-    <h3>Fruits Hub</h3>
-    <p class="meta">Version 1.0 • Kotlin • Android</p>
-    <p>A fun and colorful app built in Flutter that helps users explore different fruits with images and details.</p>
-    <div class="actions">
-      <a class="btn" href="apks/fruits_hub.apk" download>Download APK</a>
-      <a class="link" href="https://github.com/youssef336/Fruits_Hub">Source code</a>
-    </div>
-  </div>
-</article>
-
-<!-- App card 2 -->
-<article class="card">
-  <img src="images/fruits_hub_dashboard-icon.jpeg" alt="fruits_hub_dashboard-icon" class="card-img" />
-  <div class="card-body">
-    <h3>Fruits Hub Dashboard</h3>
-    <p class="meta">Version 1.0 • Flutter • Updated Jun 2025</p>
-    <p>A Flutter dashboard app to manage fruit data and monitor usage for Fruits Hub.</p>
-    <div class="actions">
-      <a class="btn" href="apks/fruits_hub_dashboard.apk" download>Download APK</a>
-      <a class="link" href="https://github.com/youssef336/fruits_hub_dashboard">Source code</a>
-    </div>
-  </div>
-</article>
-
-<!-- App card 3 -->
-<article class="card">
-  <img src="images/fashion_app.png" alt="fashion_app" class="card-img" />
-  <div class="card-body">
-    <h3>fashion_app</h3>
-    <p class="meta">Version 1.0 • Flutter • Updated Sep 2025</p>
-    <p>A modern Flutter app for browsing and showcasing fashion items with a clean UI.</p>
-    <div class="actions">
-      <a class="btn" href="apks/fashion_app.apk" download>Download APK</a>
-      <a class="link" href="https://github.com/youssef336/fashion_app">Source code</a>
-    </div>
-  </div>
-</article>
-
-<!-- App card 4 -->
-<article class="card">
-  <img src="images/fashion_dashboard.png" alt="fashion_dashboard" class="card-img" />
-  <div class="card-body">
-    <h3>fashion_dashboard</h3>
-    <p class="meta">Version 1.0 • Flutter • Updated Sep 2025</p>
-    <p>Admin dashboard for managing products, categories, and data in the fashion app.</p>
-    <div class="actions">
-      <a class="btn" href="apks/fashion_dashboard.apk" download>Download APK</a>
-      <a class="link" href="https://github.com/youssef336/fashion_dashboard">Source code</a>
-    </div>
-  </div>
-</article>
-
-<!-- App card 5 -->
-<article class="card">
-  <img src="images/Coffee_app.png" alt="Coffee_app" class="card-img" />
-  <div class="card-body">
-    <h3>Coffee_app</h3>
-    <p class="meta">Version 1.0 • Flutter • Updated Jul 2025</p>
-    <p>A Flutter app for exploring coffee drinks, menus, and ordering experiences.</p>
-    <div class="actions">
-      <a class="btn" href="apks/Coffee_app.apk" download>Download APK</a>
-      <a class="link" href="https://github.com/youssef336/Coffee_app">Source code</a>
-    </div>
-  </div>
-</article>
-
-<!-- App card 6 -->
-<article class="card">
-  <img src="images/Chat_app.png" alt="Chat_app" class="card-img" />
-  <div class="card-body">
-    <h3>Chat_app</h3>
-    <p class="meta">Version 1.0 • Flutter • Updated Mar 2025</p>
-    <p>A real-time chat application built in Flutter with messaging features.</p>
-    <div class="actions">
-      <a class="btn" href="apks/Chat_app.apk" download>Download APK</a>
-      <a class="link" href="https://github.com/youssef336/Chat_app">Source code</a>
-    </div>
-  </div>
-</article>
-
-<!-- App card 7 -->
-<article class="card">
-  <img src="images/Bookly_app.png" alt="Bookly_app" class="card-img" />
-  <div class="card-body">
-    <h3>Bookly_app</h3>
-    <p class="meta">Version 1.0 • Flutter • Updated Apr 2025</p>
-    <p>A Flutter app for discovering, reading, and managing digital books.</p>
-    <div class="actions">
-      <a class="btn" href="apks/Bookly_app.apk" download>Download APK</a>
-      <a class="link" href="https://github.com/youssef336/Bookly_app">Source code</a>
-    </div>
-  </div>
-</article>
-
-<!-- App card 8 -->
-<article class="card">
-  <img src="images/AI_chatgpt.png" alt="AI_chatgpt" class="card-img" />
-  <div class="card-body">
-    <h3>AI_chatgpt</h3>
-    <p class="meta">Version 1.0 • Flutter • Updated Sep 2025</p>
-    <p>A Flutter app integrating AI chatbot features for natural conversations.</p>
-    <div class="actions">
-      <a class="btn" href="apks/AI_chatgpt.apk" download>Download APK</a>
-      <a class="link" href="https://github.com/youssef336/AI_chatgpt">Source code</a>
-    </div>
-  </div>
-</article>
-
-<!-- App card 9 -->
-<article class="card">
-  <img src="images/Map.png" alt="Map" class="card-img" />
-  <div class="card-body">
-    <h3>Map</h3>
-    <p class="meta">Version 1.0 • Flutter • Updated Sep 2025</p>
-    <p>A Flutter app for map navigation and location-based features.</p>
-    <div class="actions">
-      <a class="btn" href="apks/Map.apk" download>Download APK</a>
-      <a class="link" href="https://github.com/youssef336/Map">Source code</a>
-    </div>
-  </div>
-</article>
-
-<!-- App card 10 -->
-<article class="card">
-  <img src="images/weather.png" alt="weather" class="card-img" />
-  <div class="card-body">
-    <h3>weather</h3>
-    <p class="meta">Version 1.0 • Flutter • Updated Mar 2025</p>
-    <p>A Flutter weather app to display forecasts and conditions.</p>
-    <div class="actions">
-      <a class="btn" href="apks/weather.apk" download>Download APK</a>
-      <a class="link" href="https://github.com/youssef336/Weather_app">Source code</a>
-    </div>
-  </div>
-</article>
-
-<!-- App card 11 -->
-<article class="card">
-  <img src="images/notes_app.png" alt="notes_app" class="card-img" />
-  <div class="card-body">
-    <h3>notes_app</h3>
-    <p class="meta">Version 1.0 • Flutter • Updated Mar 2025</p>
-    <p>A Flutter notes application for creating, editing, and organizing notes.</p>
-    <div class="actions">
-      <a class="btn" href="apks/notes_app.apk" download>Download APK</a>
-      <a class="link" href="https://github.com/youssef336/notes_app">Source code</a>
-    </div>
-  </div>
-</article>
-
-<!-- App card 12 -->
-<article class="card">
-  <img src="images/StyleSphere.png" alt="StyleSphere" class="card-img" />
-  <div class="card-body">
-    <h3>StyleSphere</h3>
-    <p class="meta">Version 1.0 • Flutter • Updated Aug 2025</p>
-    <p>A Flutter app for exploring fashion trends and personalized style suggestions.</p>
-    <div class="actions">
-      <a class="btn" href="apks/StyleSphere.apk" download>Download APK</a>
-      <a class="link" href="https://github.com/youssef336/StyleSphere">Source code</a>
-    </div>
-  </div>
-</article>
-
-<!-- App card 13 -->
-<article class="card">
-  <img src="images/tune_app.png" alt="tune_app" class="card-img" />
-  <div class="card-body">
-    <h3>tune_app</h3>
-    <p class="meta">Version 1.0 • Flutter • Updated Jul 2025</p>
-    <p>A Flutter music app for playing and managing audio tracks.</p>
-    <div class="actions">
-      <a class="btn" href="apks/tune_app.apk" download>Download APK</a>
-      <a class="link" href="https://github.com/youssef336/tune_app">Source code</a>
-    </div>
-  </div>
-</article>
-
-<!-- App card 14 -->
-<article class="card">
-  <img src="images/news_app.png" alt="news_app" class="card-img" />
-  <div class="card-body">
-    <h3>news_app</h3>
-    <p class="meta">Version 1.0 • Flutter • Updated Oct 2025</p>
-    <p>A Flutter news application that fetches and displays the latest articles with a clean and responsive UI.</p>
-    <div class="actions">
-      <a class="btn" href="apks/news_app.apk" download>Download APK</a>
-      <a class="link" href="https://github.com/youssef336/news_app">Source code</a>
-    </div>
-  </div>
-</article>
-
+        <nav class="nav">
+          <a href="#apps">Apps</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
       </div>
-    </section>
+    </header>
 
-<section id="about">
-  <h2>About Me</h2>
-  <p>
-    I’m Youssef Belal, a software developer passionate about building mobile apps with 
-    <strong>Kotlin</strong> and <strong>Flutter</strong>. 
-    As an IT graduate from CIC, I focus on creating scalable, user-centered solutions. 
-    My projects range from productivity apps like <em>Notes</em> to fun apps like <em>Fruits Hub</em>. 
-    I’m eager to join innovative teams and continue growing as a mobile engineer.
-  </p>
-</section>
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Portfolio & APK downloads</p>
+            <h1>Clean Flutter apps, shipped as simple APK downloads.</h1>
+            <p class="hero-text">
+              A focused portfolio of mobile apps built with Flutter and Kotlin,
+              organized for quick browsing, source-code access, and direct APK
+              downloads.
+            </p>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <ul class="contact">
-        <li><strong>Email:</strong> youssefbelal2004@gmail.com</li>
-        <li><strong>GitHub:</strong> <a href="https://github.com/youssef336">yourusername</a></li>
-        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/youssef-belal-509385294/">yourusername</a></li>
-      </ul>
-    </section>
-  </main>
+            <div class="hero-actions">
+              <a class="btn" href="#apps">View apps</a>
+              <a class="btn btn-ghost" href="#contact">Contact me</a>
+            </div>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 Youssef — Kotlin App Portfolio</p>
-    </div>
-  </footer>
-</body>
+            <ul class="hero-points">
+              <li>APK download links</li>
+              <li>GitHub source links</li>
+              <li>Automatic APK update from GitHub</li>
+            </ul>
+          </div>
+
+          <aside class="hero-panel">
+            <div class="panel-card panel-card-accent">
+              <span class="panel-label">Current status</span>
+              <strong>Portfolio live</strong>
+              <p>Responsive, static, and ready for quick content updates.</p>
+            </div>
+            <div class="panel-card">
+              <span class="panel-label">Last APK update from GitHub</span>
+              <time
+                class="site-updated-time"
+                data-site-updated
+                datetime="2026-04-17T00:19:23+03:00"
+              >
+                April 17, 2026, 12:19 AM
+              </time>
+            </div>
+            <div class="panel-card">
+              <span class="panel-label">Featured focus</span>
+              <strong>Flutter apps and dashboards</strong>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section-block" id="apps">
+        <div class="container section-head">
+          <div>
+            <p class="eyebrow">Projects</p>
+            <h2>My apps</h2>
+          </div>
+          <p>
+            Download and try my Android apps. You might need to enable “Install
+            from unknown sources” on your device.
+          </p>
+        </div>
+
+        <div class="container grid">
+          <article class="card card-featured">
+            <img
+              src="images/fruits_hub_dashboard-icon.jpeg"
+              alt="fruits_hub_dashboard-icon"
+              class="card-img"
+            />
+            <div class="card-body">
+              <div class="card-topline">
+                <span class="chip chip-hot" data-apk-updated-chip>Updated</span>
+                <span class="meta">Flutter • Dashboard</span>
+              </div>
+              <h3>Fruits Hub Dashboard</h3>
+              <p>
+                A Flutter dashboard app to manage fruit data and monitor usage
+                for Fruits Hub.
+              </p>
+              <div class="actions">
+                <a class="btn" href="apks/fruitehup_dashboard.apk" download
+                  >Download APK</a
+                >
+                <a
+                  class="link"
+                  href="https://github.com/youssef336/fruits_hub_dashboard"
+                  >Source code</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="card card-featured">
+            <img
+              src="images/fashion_dashboard.png"
+              alt="fashion_dashboard"
+              class="card-img"
+            />
+            <div class="card-body">
+              <div class="card-topline">
+                <span class="chip chip-hot" data-apk-updated-chip>Updated</span>
+                <span class="meta">Flutter • Dashboard</span>
+              </div>
+              <h3>fashion_dashboard</h3>
+              <p>
+                Admin dashboard for managing products, categories, and data in
+                the fashion app.
+              </p>
+              <div class="actions">
+                <a class="btn" href="apks/fasion_dashboard.apk" download
+                  >Download APK</a
+                >
+                <a
+                  class="link"
+                  href="https://github.com/youssef336/fashion_dashboard"
+                  >Source code</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img
+              src="images/fashion_app.png"
+              alt="fashion_app"
+              class="card-img"
+            />
+            <div class="card-body">
+              <span class="meta">Version 1.0 • Flutter</span>
+              <h3>fashion_app</h3>
+              <p>
+                A modern Flutter app for browsing and showcasing fashion items
+                with a clean UI.
+              </p>
+              <div class="actions">
+                <a class="btn" href="apks/fashion_app.apk" download
+                  >Download APK</a
+                >
+                <a class="link" href="https://github.com/youssef336/fashion_app"
+                  >Source code</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img
+              src="images/fruits_hub-icon.png"
+              alt="Fruits Hub App Icon"
+              class="card-img"
+            />
+            <div class="card-body">
+              <span class="meta">Version 1.0 • Kotlin</span>
+              <h3>Fruits Hub</h3>
+              <p>
+                A fun and colorful app built in Flutter that helps users explore
+                different fruits with images and details.
+              </p>
+              <div class="actions">
+                <a class="btn" href="apks/fruits_hub.apk" download
+                  >Download APK</a
+                >
+                <a class="link" href="https://github.com/youssef336/Fruits_Hub"
+                  >Source code</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img
+              src="images/Coffee_app.png"
+              alt="Coffee_app"
+              class="card-img"
+            />
+            <div class="card-body">
+              <span class="meta">Version 1.0 • Flutter</span>
+              <h3>Coffee_app</h3>
+              <p>
+                A Flutter app for exploring coffee drinks, menus, and ordering
+                experiences.
+              </p>
+              <div class="actions">
+                <a class="btn" href="apks/Coffee_app.apk" download
+                  >Download APK</a
+                >
+                <a class="link" href="https://github.com/youssef336/Coffee_app"
+                  >Source code</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="images/Chat_app.png" alt="Chat_app" class="card-img" />
+            <div class="card-body">
+              <span class="meta">Version 1.0 • Flutter</span>
+              <h3>Chat_app</h3>
+              <p>
+                A real-time chat application built in Flutter with messaging
+                features.
+              </p>
+              <div class="actions">
+                <a class="btn" href="apks/Chat_app.apk" download
+                  >Download APK</a
+                >
+                <a class="link" href="https://github.com/youssef336/Chat_app"
+                  >Source code</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img
+              src="images/Bookly_app.png"
+              alt="Bookly_app"
+              class="card-img"
+            />
+            <div class="card-body">
+              <span class="meta">Version 1.0 • Flutter</span>
+              <h3>Bookly_app</h3>
+              <p>
+                A Flutter app for discovering, reading, and managing digital
+                books.
+              </p>
+              <div class="actions">
+                <a class="btn" href="apks/Bookly_app.apk" download
+                  >Download APK</a
+                >
+                <a class="link" href="https://github.com/youssef336/Bookly_app"
+                  >Source code</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img
+              src="images/AI_chatgpt.png"
+              alt="AI_chatgpt"
+              class="card-img"
+            />
+            <div class="card-body">
+              <span class="meta">Version 1.0 • Flutter</span>
+              <h3>AI_chatgpt</h3>
+              <p>
+                A Flutter app integrating AI chatbot features for natural
+                conversations.
+              </p>
+              <div class="actions">
+                <a class="btn" href="apks/AI_chatgpt.apk" download
+                  >Download APK</a
+                >
+                <a class="link" href="https://github.com/youssef336/AI_chatgpt"
+                  >Source code</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="images/Map.png" alt="Map" class="card-img" />
+            <div class="card-body">
+              <span class="meta">Version 1.0 • Flutter</span>
+              <h3>Map</h3>
+              <p>
+                A Flutter app for map navigation and location-based features.
+              </p>
+              <div class="actions">
+                <a class="btn" href="apks/Map.apk" download>Download APK</a>
+                <a class="link" href="https://github.com/youssef336/Map"
+                  >Source code</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="images/weather.png" alt="weather" class="card-img" />
+            <div class="card-body">
+              <span class="meta">Version 1.0 • Flutter</span>
+              <h3>weather</h3>
+              <p>A Flutter weather app to display forecasts and conditions.</p>
+              <div class="actions">
+                <a class="btn" href="apks/weather.apk" download>Download APK</a>
+                <a class="link" href="https://github.com/youssef336/Weather_app"
+                  >Source code</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="images/notes_app.png" alt="notes_app" class="card-img" />
+            <div class="card-body">
+              <span class="meta">Version 1.0 • Flutter</span>
+              <h3>notes_app</h3>
+              <p>
+                A Flutter notes application for creating, editing, and
+                organizing notes.
+              </p>
+              <div class="actions">
+                <a class="btn" href="apks/notes_app.apk" download
+                  >Download APK</a
+                >
+                <a class="link" href="https://github.com/youssef336/notes_app"
+                  >Source code</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img
+              src="images/StyleSphere.png"
+              alt="StyleSphere"
+              class="card-img"
+            />
+            <div class="card-body">
+              <span class="meta">Version 1.0 • Flutter</span>
+              <h3>StyleSphere</h3>
+              <p>
+                A Flutter app for exploring fashion trends and personalized
+                style suggestions.
+              </p>
+              <div class="actions">
+                <a class="btn" href="apks/StyleSphere.apk" download
+                  >Download APK</a
+                >
+                <a class="link" href="https://github.com/youssef336/StyleSphere"
+                  >Source code</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="images/tune_app.png" alt="tune_app" class="card-img" />
+            <div class="card-body">
+              <span class="meta">Version 1.0 • Flutter</span>
+              <h3>tune_app</h3>
+              <p>A Flutter music app for playing and managing audio tracks.</p>
+              <div class="actions">
+                <a class="btn" href="apks/tune_app.apk" download
+                  >Download APK</a
+                >
+                <a class="link" href="https://github.com/youssef336/tune_app"
+                  >Source code</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="images/news_app.png" alt="news_app" class="card-img" />
+            <div class="card-body">
+              <span class="meta">Version 1.0 • Flutter</span>
+              <h3>news_app</h3>
+              <p>
+                A Flutter news application that fetches and displays the latest
+                articles with a clean and responsive UI.
+              </p>
+              <div class="actions">
+                <a class="btn" href="apks/news_app.apk" download
+                  >Download APK</a
+                >
+                <a class="link" href="https://github.com/youssef336/news_app"
+                  >Source code</a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block" id="about">
+        <div class="container about-grid">
+          <div>
+            <p class="eyebrow">About</p>
+            <h2>Building mobile products with Flutter and Kotlin.</h2>
+            <p>
+              I’m Youssef Belal, a software developer passionate about building
+              mobile apps with <strong>Kotlin</strong> and
+              <strong>Flutter</strong>. As an IT graduate from CIC, I focus on
+              creating scalable, user-centered solutions.
+            </p>
+          </div>
+
+          <div class="about-card">
+            <h3>What I do</h3>
+            <ul>
+              <li>Mobile app development</li>
+              <li>Admin dashboards and tooling</li>
+              <li>Clean UI and practical UX</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block section-block-soft" id="contact">
+        <div class="container contact-grid">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h2>Let’s build something useful.</h2>
+          </div>
+
+          <ul class="contact">
+            <li><strong>Email:</strong> youssefbelal2004@gmail.com</li>
+            <li>
+              <strong>GitHub:</strong>
+              <a href="https://github.com/youssef336">github.com/youssef336</a>
+            </li>
+            <li>
+              <strong>LinkedIn:</strong>
+              <a href="https://www.linkedin.com/in/youssef-belal-509385294/"
+                >linkedin.com/in/youssef-belal-509385294</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <p>© 2025 Youssef — Kotlin App Portfolio</p>
+        <p class="update-label">
+          Last APK update:
+          <time
+            class="site-updated-time"
+            data-site-updated
+            datetime="2026-04-17T00:19:23+03:00"
+            >April 17, 2026, 12:19 AM</time
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script defer src="app.js"></script>
+  </body>
 </html>
