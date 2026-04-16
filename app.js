@@ -172,4 +172,39 @@ function updateApkDownloadLinks(files) {
       continue;
     }
 
-  
+    const githubFileUrl = fileMap.get(currentName.toLowerCase());
+
+    if (!githubFileUrl) {
+      continue;
+    }
+
+    button.href = githubFileUrl;
+    button.target = "_blank";
+    button.rel = "noopener";
+  }
+}
+
+async function loadLastUpdated() {
+  const repo = getMetaContent("github-repo");
+
+  if (!repo) {
+    return;
+  }
+
+  try {
+    const latestApkUpdate = await fetchLatestApkUpdate();
+    updateLastUpdatedLabel(latestApkUpdate);
+    updateUpdatedChips(latestApkUpdate);
+  } catch {
+    // Keep existing fallback text if GitHub API is unavailable.
+  }
+
+  try {
+    const files = await fetchApkFilesFromGitHub();
+    updateApkDownloadLinks(files);
+  } catch {
+    // Keep local links if GitHub API is unavailable.
+  }
+}
+
+document.addEventListener("DOMContentLoaded", loadLastUpdated);
