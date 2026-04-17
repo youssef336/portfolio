@@ -125,15 +125,9 @@ async function fetchLatestApkUpdate() {
   return latest?.commit?.committer?.date || latest?.commit?.author?.date || "";
 }
 
-async function fetchApkFilesFromGitHub() {
+async function fetchApkAssetsFromLatestRelease() {
   const repo = getMetaContent("github-repo");
-  const branch = getMetaContent("github-branch") || "main";
-  const apkPath = getMetaContent("github-apk-path") || "apks";
-
-  const url = new URL(
-    `https://api.github.com/repos/${repo}/contents/${apkPath}`,
-  );
-  url.searchParams.set("ref", branch);
+  const url = new URL(`https://api.github.com/repos/${repo}/releases/latest`);
   url.searchParams.set("_", Date.now().toString());
 
   const response = await fetch(url.toString(), {
@@ -144,21 +138,27 @@ async function fetchApkFilesFromGitHub() {
   });
 
   if (!response.ok) {
-    throw new Error("GitHub APK content request failed");
+    throw new Error("GitHub release request failed");
   }
 
-  const files = await response.json();
-  return Array.isArray(files) ? files : [];
+  const release = await response.json();
+  const assets = Array.isArray(release?.assets) ? release.assets : [];
+
+  return assets.filter(
+    (asset) =>
+      asset &&
+      typeof asset.name === "string" &&
+      asset.name.toLowerCase().endsWith(".apk") &&
+      typeof asset.browser_download_url === "string",
+  );
 }
 
-function updateApkDownloadLinks(files) {
+function updateApkDownloadLinks(assets) {
   const fileMap = new Map(
-    files
-      .filter(
-        (file) =>
-          file && file.type === "file" && file.name && file.download_url,
-      )
-      .map((file) => [file.name.toLowerCase(), file.download_url]),
+    assets.map((asset) => [
+      asset.name.toLowerCase(),
+      asset.browser_download_url,
+    ]),
   );
 
   const buttons = document.querySelectorAll("a.btn[download]");
@@ -200,10 +200,10 @@ async function loadLastUpdated() {
   }
 
   try {
-    const files = await fetchApkFilesFromGitHub();
-    updateApkDownloadLinks(files);
+    const assets = await fetchApkAssetsFromLatestRelease();
+    updateApkDownloadLinks(assets);
   } catch {
-    // Keep local links if GitHub API is unavailable.
+    // Keep local links if release assets are unavailable.
   }
 }
 
