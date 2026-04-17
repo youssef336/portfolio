@@ -154,6 +154,7 @@ async function fetchApkAssetsFromLatestRelease() {
 }
 
 function updateApkDownloadLinks(assets) {
+  const repo = getMetaContent("github-repo");
   const fileMap = new Map(
     assets.map((asset) => [
       asset.name.toLowerCase(),
@@ -173,12 +174,16 @@ function updateApkDownloadLinks(assets) {
     }
 
     const githubFileUrl = fileMap.get(currentName.toLowerCase());
+    const fallbackReleaseUrl = repo
+      ? `https://github.com/${repo}/releases/latest/download/${encodeURIComponent(currentName)}`
+      : "";
+    const resolvedUrl = githubFileUrl || fallbackReleaseUrl;
 
-    if (!githubFileUrl) {
+    if (!resolvedUrl) {
       continue;
     }
 
-    button.href = githubFileUrl;
+    button.href = resolvedUrl;
     button.target = "_blank";
     button.rel = "noopener";
   }
@@ -203,7 +208,7 @@ async function loadLastUpdated() {
     const assets = await fetchApkAssetsFromLatestRelease();
     updateApkDownloadLinks(assets);
   } catch {
-    // Keep local links if release assets are unavailable.
+    updateApkDownloadLinks([]);
   }
 }
 

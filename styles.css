@@ -94,6 +94,16 @@ a {
   text-decoration: none;
 }
 
+.brand-photo {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 999px;
+  object-fit: cover;
+  object-position: center 20%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+}
+
 .brand-mark {
   display: grid;
   place-items: center;
