@@ -1,65 +1,45 @@
 <h1 align="center">Portfolio</h1>
 
 <p align="center">
-  A fast, dependency-free portfolio site that showcases my Flutter &amp; Kotlin apps with one-tap APK downloads.
+  My personal site: experience, featured Flutter projects, open-source Flutter tools and Android builds you can install.
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/GitHub%20API-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub API" />
+  <a href="https://portfolio-puce-theta-0cwgzrjpc0.vercel.app"><b>Live site</b></a> ·
+  <a href="https://github.com/youssef336/portfolio/releases/tag/apps">APK downloads</a> ·
+  <a href="cv/Youssef_Belal_CV.pdf">CV</a>
 </p>
 
 ## About
 
-A single-page, fully static portfolio built with plain HTML, CSS and vanilla JavaScript — no framework and no build step.
-It presents 14 of my mobile apps (Flutter apps, admin dashboards and Kotlin work), each with a short description, a
-**Download APK** button and a link to its source code. At load time a small script talks to the GitHub REST API to show
-when the APKs were last updated and to point the download buttons at the latest GitHub Release assets.
+A single static page (plain HTML and CSS, no framework, no build step, no JavaScript), deployed on Vercel from `main`.
+It follows the system light/dark theme and works from phone width up.
 
-## ✨ Features
+Sections: hero with CV download, experience, featured projects (Xspire / MysteryBag, Fruits Hub, StyleBox,
+Fashion Store), 12 open-source Flutter tools, more apps with APK downloads, skills, education and contact.
 
-- 📱 **App gallery** — cards for 14 apps (Fruits Hub & its dashboard, Fashion app & dashboard, Coffee, Chat, Bookly, AI Chat, Map, Weather, Notes, StyleSphere, Tune, News), with featured cards for the dashboards.
-- ⬇️ **Direct APK downloads** — every card links to an APK bundled in [`apks/`](apks).
-- 🔄 **Auto-updating download links** — `app.js` reads the latest release from the GitHub API and swaps each button to the matching `.apk` release asset, falling back to `releases/latest/download/<file>`.
-- 🕒 **"Last APK update" timestamp** — fetched from the latest commit touching `apks/`, shown in the hero panel and footer and as an "Updated Xh ago" chip on featured cards.
-- 🔗 **Source-code links** to each app's GitHub repository.
-- 🙋 **About & Contact** sections with GitHub and LinkedIn links.
-- 📐 **Responsive layout** with breakpoints at 980px, 720px and 560px.
-- 🛡️ **Graceful degradation** — if the GitHub API is unreachable the static fallback date and local APK links stay in place.
+## APKs
 
-## 🛠 Tech stack
+The Android builds are attached to the [`apps` release](https://github.com/youssef336/portfolio/releases/tag/apps), not
+committed to the repo, so the site stays small and every download is the real file. Each button links to
+`releases/download/apps/<file>.apk`. To update an app, upload the new APK to that release with the same file name:
 
-| Layer | Choice |
-| --- | --- |
-| Markup | Semantic HTML5 (`index.html`) |
-| Styling | Hand-written CSS with media queries (`styles.css`) |
-| Behaviour | Vanilla JavaScript, `fetch` + `Intl.DateTimeFormat` (`app.js`) |
-| Data | GitHub REST API — `/repos/{repo}/commits` and `/repos/{repo}/releases/latest` |
-
-The target repository, branch and APK folder are configured through `<meta>` tags in `index.html`:
-
-```html
-<meta name="github-repo" content="youssef336/portfolio" />
-<meta name="github-branch" content="main" />
-<meta name="github-apk-path" content="apks" />
+```bash
+gh release upload apps path/to/notes_app.apk --clobber -R youssef336/portfolio
 ```
 
-## 🏗 Project structure
+## Project structure
 
 ```
 portfolio/
-├── index.html   # single page: hero, apps grid, about, contact
-├── styles.css   # layout, cards, responsive breakpoints
-├── app.js       # GitHub API: last-update time + release APK links
-├── images/      # app card images and profile photo
-└── apks/        # downloadable Android builds
+├── index.html   # the whole page
+├── styles.css   # layout, light/dark theme, responsive breakpoints
+├── favicon.svg
+├── cv/          # downloadable CV (PDF)
+└── images/      # project images and profile photo
 ```
 
-## 🚀 Getting started
-
-No dependencies and no build step — just serve the folder:
+## Run locally
 
 ```bash
 git clone https://github.com/youssef336/portfolio.git
@@ -67,14 +47,7 @@ cd portfolio
 python3 -m http.server 8000   # then open http://localhost:8000
 ```
 
-Opening `index.html` directly in a browser also works. To add an app, copy one of the `<article class="card">` blocks in
-`index.html`, drop its image in `images/` and its APK in `apks/` (and attach the same file name to a GitHub Release so the
-auto-updating link can find it).
+## Author
 
-> On Android you may need to allow **Install from unknown sources** to install the downloaded APKs.
-
-## 👤 Author
-
-**Youssef Belal Zakaria** · [GitHub @youssef336](https://github.com/youssef336)
-
-⭐ If you like this project, give it a star!
+**Youssef Belal** · [GitHub @youssef336](https://github.com/youssef336) ·
+[LinkedIn](https://www.linkedin.com/in/youssef-belal-509385294/)
