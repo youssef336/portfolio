@@ -286,6 +286,11 @@ h3 {
   background: var(--tag-bg);
 }
 
+.project-img.screens {
+  height: auto;
+  aspect-ratio: 1200 / 750;
+}
+
 .project-img.contain {
   object-fit: contain;
   padding: 20px;

@@ -5,14 +5,14 @@
 </p>
 
 <p align="center">
-  <a href="https://portfolio-puce-theta-0cwgzrjpc0.vercel.app"><b>Live site</b></a> ·
+  <a href="https://youssef336.github.io"><b>Live site</b></a> ·
   <a href="https://github.com/youssef336/portfolio/releases/tag/apps">APK downloads</a> ·
   <a href="cv/Youssef_Belal_CV.pdf">CV</a>
 </p>
 
 ## About
 
-A single static page (plain HTML and CSS, no framework, no build step, no JavaScript), deployed on Vercel from `main`.
+A single static page (plain HTML and CSS, no framework, no build step, no JavaScript), deployed on GitHub Pages at [youssef336.github.io](https://youssef336.github.io) (the old Vercel link mirrors it).
 It follows the system light/dark theme and works from phone width up.
 
 Sections: hero with CV download, experience, featured projects (Xspire / MysteryBag, Fruits Hub, StyleBox,
